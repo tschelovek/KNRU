@@ -169,6 +169,27 @@
 .callback
   &-block
     margin-top: 100px
+    .swiper-pagination
+      position: static
+      width: auto
+      &-bullet
+        height: 3px
+        width: 50px
+        background-color: var(--gray-5)
+        -webkit-border-radius: 1.5px
+        -moz-border-radius: 1.5px
+        border-radius: 1.5px
+        opacity: 1
+        transition: width 0.3s, background-color 0.3s
+        &.swiper-pagination-bullet-active
+          width: 80px
+          background-color: var(--red-brand)
+
+    .btn-wrapper
+      margin-top: 30px
+      display: flex
+      justify-content: space-between
+      align-items: center
   &__slide
     padding: 40px
     display: flex
