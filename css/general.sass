@@ -1,0 +1,501 @@
+html
+  --red-brand: #b10b2e
+  --red-light: #d21e44
+  --black: #202020
+  --gray-dark-text: #4a4a4a
+  --gray-3: #828282
+  --gray-4: #bdbdbd
+  --gray-5: #e0e0e0
+  --gray-light: #f9f9f9
+  --wh: #fff
+
+*, *::before, *::after
+  margin: 0
+  +box
+
+body
+  background-color: white
+  color: var(--black)
+  font-family: Montserrat, sans-serif
+
+ul
+  margin: 0
+  padding: 0
+  list-style: none
+
+a
+  text-decoration: none
+
+input[type="number"].no-arrows
+  -moz-appearance: textfield
+  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+.theme-color
+  color: #B10B2E
+
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  margin: -1px
+  border: 0
+  padding: 0
+  white-space: nowrap
+  clip-path: inset(100%)
+  clip: rect(0 0 0 0)
+  overflow: hidden
+
+.grey-box
+  -webkit-border-radius: 20px
+  -moz-border-radius: 20px
+  border-radius: 20px
+  background-color: var(--gray-light)
+
+.section-description
+  font-family: "Roboto", sans-serif
+  font-weight: 400
+  font-size: 22px
+  line-height: 140%
+  color: var(--gray-dark-text)
+
+.card_contact
+  padding: 34px
+  max-width: 310px
+  background-color: white
+  text-align: center
+  -webkit-border-radius: 20px
+  -moz-border-radius: 20px
+  border-radius: 20px
+  &__img-wrapper
+    margin-bottom: 20px
+    height: 120px
+    overflow: hidden
+  &__title
+    font-weight: 600
+    font-size: 18px
+    line-height: 140%
+    text-align: center
+    color: var(--black)
+  &__occupation
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 140%
+    text-align: center
+    color: var(--gray-3)
+  &__link
+    margin-top: 12px
+    display: inline-flex
+    align-items: center
+    gap: 10px
+    font-family: "Roboto", sans-serif
+    font-weight: 600
+    font-size: 18px
+    line-height: 140%
+    color: var(--black)
+  &__messengers
+    margin-top: 10px
+    display: flex
+    justify-content: center
+    gap: 8px
+
+
+.btn
+  border: none
+  font-family: Montserrat, sans-serif
+  cursor: pointer
+  display: inline-block
+  &_burger
+    padding: 10px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: left
+    height: 32px
+    width: 48px
+    border: none
+    font-size: 0
+    background-color: inherit
+    z-index: 20
+    cursor: pointer
+    &:focus
+      outline: none
+    &:focus-visible
+      outline: $burgerBtn
+    &:hover
+      span, span::before, span::after
+        //background-color: $themeColor
+        width: 28px
+    span
+      display: block
+      position: relative
+      width: 20px
+      height: 1px
+      background-color: $burgerBtn
+      transition: transform 0.3s, background-color 0.2s ease-out, width 0.2s
+    span::before, span::after
+      content: ''
+      position: absolute
+      left: 0
+      display: block
+      height: 1px
+      background-color: $burgerBtn
+      transition: transform 0.3s ease-in-out, background-color 0.2s ease-out, width 0.2s
+    span::before
+      width: 13px
+      top: -5px
+    span::after
+      width: 28px
+      bottom: -5px
+    &.active span
+      background-color: transparent
+    &.active span::before
+      transform: rotate(45deg)
+      width: 28px
+      top: 0
+    &.active span::after
+      transform: rotate(-45deg)
+      width: 28px
+      bottom: 0
+  &_red
+    padding: 16px 24px
+    display: inline-flex
+    gap: 10px
+    align-items: center
+    justify-content: center
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    border-radius: 10px
+    color: white
+    background-color: var(--red-brand)
+    font-family: "Roboto", sans-serif
+    font-weight: 700
+    font-size: 16px
+    line-height: 140%
+  &_white
+    padding: 16px 36px
+    border-radius: 10px
+    background-color: white
+    font-family: "Roboto", sans-serif
+    font-weight: 600
+    font-size: 18px
+    line-height: 140%
+    color: var(--black)
+  &_transparent
+    border: 1px solid var(--red-brand)
+    border-radius: 10px
+    padding: 14px 24px
+    background-color: transparent
+    font-family: "Roboto", sans-serif
+    font-weight: 600
+    font-size: 18px
+    line-height: 140%
+    color: var(--red-brand)
+    transition: background-color 0.5s, color 0.4s
+    &:hover
+      background-color: var(--red-brand)
+      color: white
+
+.container
+  padding: 0 40px
+  margin: 0 auto
+  max-width: 1360px
+  width: 100%
+  &_body
+    position: relative
+    overflow: hidden
+  &_hd
+    padding: 0
+    margin: 0 auto
+    max-width: 1920px
+    width: 100%
+
+.bg
+  &_black
+    background-color: $black
+    color: white
+
+.title
+  &_h1
+    max-width: 840px
+    font-family: Montserrat, sans-serif
+    font-size: 80px
+    font-style: normal
+    font-weight: 500
+    line-height: 110%
+  &_h2
+    color: $black
+    font-family: Montserrat, sans-serif
+    font-size: 52px
+    font-style: normal
+    font-weight: 700
+    line-height: 1.1
+  &_h3
+    color: #1E2527
+    font-size: 30px
+    font-family: Montserrat, sans-serif
+    font-weight: 500
+    line-height: 1.3
+    margin-bottom: 20px
+
+.backslash
+  padding-right: 60px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    right: 16px
+    top: 12px
+    width: 32px
+    height: 3px
+    background-color: $themeColor
+    transform: rotate(56deg)
+
+.backslash-list
+  margin-top: 12px
+  padding-left: 20px
+  li
+    margin-top: 8px
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      left: -20px
+      top: 8px
+      display: block
+      width: 16px
+      height: 3px
+      background-color: $themeColor
+      transform: rotate(56deg)
+
+.overline
+  font-size: 0.6em
+  -ms-transform: translateY(-6px)
+  -o-transform: translateY(-6px)
+  transform: translateY(-6px)
+  position: relative
+  display: inline-block
+
+.slider
+  &__button-wrapper
+    margin-left: auto
+    display: flex
+    gap: 10px
+  &__btn
+    width: 74px
+    height: 74px
+    background-color: white
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    border: 1px solid #D9D9D9
+    cursor: pointer
+    position: relative
+    transition: background-color 0.2s ease-in-out, border 0.2s ease-in-out
+    &:hover
+      border: 1px solid $themeColor
+      background-color: $themeColor
+      &::before, &::after
+        background-color: white
+    &::before, &::after
+      transition: background-color 0.2s ease-in-out
+    &_prev
+      &::before, &::after
+        content: ''
+        width: 12px
+        height: 2px
+        position: absolute
+        left: 26px
+        background-color: $black
+      &::before
+        top: 32px
+        rotate: 135deg
+      &::after
+        top: 40px
+        rotate: 45deg
+    &_next
+      &::before, &::after
+        content: ''
+        width: 12px
+        height: 2px
+        position: absolute
+        left: 30px
+        background-color: $black
+      &::before
+        top: 32px
+        rotate: 45deg
+      &::after
+        top: 40px
+        rotate: 135deg
+
+
+.swiper-slide
+  height: auto
+
+.modal
+  display: none
+  &_view
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 1050
+    display: none
+    overflow-x: hidden
+    outline: 0
+    transition: background-color 0.3s
+    -webkit-text-size-adjust: 100%
+    -moz-text-size-adjust: none
+    -ms-text-size-adjust: 100%
+    text-size-adjust: 100%
+    overscroll-behavior-y: contain
+    &.open
+      display: flex
+      justify-content: center
+      //align-items: center
+      background-color: hsla(0, 0%, 0%, 0.7)
+      height: 100%
+      overflow-y: scroll
+    .container
+      display: flex
+    &__wrapper
+      margin: auto
+      display: flex
+    &__h2
+      margin: 120px 0 84px
+      color: $black
+      font-family: Montserrat, sans-serif
+      font-size: 48px
+      font-weight: 400
+      line-height: 1.05
+    &__block
+      &_left
+        padding: 60px 120px 140px
+        flex: calc(1920/862)
+        background-color: white
+        &__controls
+          display: flex
+          align-items: center
+        &__content__image
+          max-width: 666px
+          img
+            max-inline-size: 100%
+      &_right
+        padding: 110px
+        flex: calc(1920/1058)
+        display: flex
+        flex-flow: column
+        gap: 60px
+        background: #1E2527 url(../images/bg_granit.png)
+        color: white
+        &__controls
+          display: flex
+          align-items: center
+          justify-content: center
+          gap: 20px
+          a
+            color: white
+        &__info .btn
+          margin-top: 50px
+        .projects
+          &__specs
+            &__title
+              color: white
+            &__text
+              color: white
+    &__p
+      margin-top: auto
+      color: white
+      font-size: 16px
+      font-style: normal
+      font-weight: 400
+      line-height: 1.5
+      max-width: 490px
+    #close_modal_view
+      width: 40px
+      height: 40px
+      font-size: 0
+      background-color: white
+      &::before
+        content: ''
+        display: block
+        background-color: $black
+        border: none
+        width: 38px
+        height: 1px
+        transform: rotate(45deg)
+      &::after
+        content: ''
+        display: block
+        background-color: $black
+        border: none
+        width: 38px
+        height: 1px
+        transform: rotate(-45deg)
+  &_default
+    background: #fff
+    border-radius: 3px
+    height: auto
+    position: relative
+    left: auto
+    top: auto
+    text-align: center
+    max-width: 600px
+    padding: 50px
+    width: 100%
+  &__input
+    padding: 12px 20px
+    background: #ffffff
+    width: 100%
+    border: #f3f3f4 1px solid
+    font-family: "Montserrat", sans-serif
+    font-weight: 400
+    font-size: 16px
+    line-height: 1.2
+    -moz-box-shadow: none
+    -webkit-box-shadow: none
+    box-shadow: none
+    -webkit-appearance: none
+  &-form__row
+    margin-bottom: 12px
+    button[type="submit"]
+      margin: 0 auto
+
+.form__policy
+  margin-top: 20px
+  label
+    font-size: 12px
+    font-weight: 300
+    svg
+      max-width: 100%
+      width: auto
+      height: 15px
+    span
+      flex-shrink: 2
+  &__link
+    text-decoration: underline
+
+.notice_checked
+  position: absolute
+  z-index: -1
+  opacity: 0
+  + label
+    display: inline-flex
+    align-items: center
+    gap: 8px
+    user-select: none
+    .svg_check
+      visibility: hidden
+      fill: white
+      transition: visibility 0.2s, fill 0.3s ease-in-out
+  &:checked + label .svg_check
+    visibility: unset
+    fill: #333333
+
+.stop-scrolling
+  height: 100%
+  overflow: hidden
+
+

@@ -1,0 +1,315 @@
+.hero {
+  margin-top: 100px;
+}
+.hero__content {
+  padding: 56px 40px;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+.hero__content .btn {
+  margin-top: 42px;
+}
+.hero .title_h1 {
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 110%;
+  color: var(--black);
+}
+
+.numbers_about {
+  margin-top: 100px;
+}
+.numbers_about .title_h2 {
+  margin-bottom: 60px;
+}
+
+.advantages {
+  margin-top: 100px;
+}
+.advantages_about__list {
+  display: flex;
+  gap: 20px;
+}
+.advantages_about__item {
+  flex: 1;
+}
+.advantages_about__item h3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: var(--red-brand);
+}
+.advantages_about__item p {
+  margin-top: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+
+.profit {
+  margin-top: 100px;
+}
+.profit__wrapper {
+  padding: 16px 30px 24px 42px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-5);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.profit__text p {
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--black);
+}
+.profit__graph {
+  position: relative;
+}
+.profit__graph__popup {
+  padding: 14px;
+  position: absolute;
+  top: 14%;
+  left: 39%;
+  display: flex;
+  align-items: center;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--black);
+  background-color: var(--gray-light);
+}
+.profit__graph__popup .theme-color {
+  margin-right: 8px;
+  font-size: 32px;
+  line-height: 130%;
+}
+.profit__symbols {
+  margin-top: 40px;
+  display: flex;
+}
+.profit__symbols__item {
+  margin-right: 32px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.profit__symbols__item::before {
+  margin-right: 12px;
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: var(--black);
+}
+.profit__symbols__item:first-child::before {
+  background-color: var(--red-brand);
+}
+
+.services {
+  margin-top: 100px;
+}
+.services .container {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+.services__info {
+  flex: 3;
+}
+.services__info h2 {
+  padding-right: 80px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: var(--black);
+}
+.services__info p {
+  margin-top: 24px;
+  padding-right: 190px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.services__info .btn {
+  margin-top: 30px;
+}
+.services__image-wrapper {
+  flex: 2;
+  overflow: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.benefits {
+  margin-top: 100px;
+}
+.benefits__wrapper {
+  padding: 50px 42px;
+}
+.benefits__wrapper .section-description {
+  margin-top: 24px;
+}
+.benefits__list {
+  margin-top: 60px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+.benefits__item {
+  padding: 24px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  background: var(--wh);
+}
+.benefits__item h3 {
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+  color: var(--black);
+}
+.benefits__item p {
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.benefits__item__img-wrapper {
+  height: 126px;
+  overflow: hidden;
+}
+.benefits__item__img-wrapper img {
+  max-height: 100%;
+}
+
+.callback-block {
+  margin-top: 100px;
+}
+.callback__slide {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.callback__slide__info h2 {
+  margin-bottom: 20px;
+  padding-right: 100px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 130%;
+  color: var(--black);
+}
+.callback__slide__info p {
+  margin-top: 20px;
+  padding-right: 126px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.callback__slide__form {
+  margin-top: 40px;
+}
+.callback__slide__form .form__row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.callback__slide__form .form__field-wrapper {
+  flex: 1;
+}
+.callback__slide__form .form__field-wrapper input {
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 54px;
+}
+.callback__slide__form .form__field-wrapper input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.callback__slide__form .form__field-wrapper input:focus {
+  outline: none;
+}
+.callback__slide__form .form__field-wrapper .btn_submit {
+  width: 100%;
+  height: 54px;
+}
+.callback__slide__form .form__privacy {
+  margin-top: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+  color: var(--gray-3);
+}
+.callback__slide__form .form__privacy__link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--red-brand);
+}
+.callback__slide > div {
+  flex: 1;
+}
+
+.why {
+  margin-top: 100px;
+}
+.why__list {
+  margin-top: 60px;
+  display: flex;
+  gap: 28px;
+}
+.why__item {
+  padding: 80px 24px 24px 24px;
+  position: relative;
+  flex: 1;
+  border: 1px solid var(--gray-5);
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: var(--black);
+}
+.why__item_1 {
+  background: url("../icons/podium-victory-leader.svg") top 24px left 24px no-repeat;
+}
+.why__item_2 {
+  background: url("../icons/employees.svg") top 24px left 24px no-repeat;
+}
+.why__item_3 {
+  background: url("../icons/dashboard-monitor.svg") top 24px left 24px no-repeat;
+}
+.why__item_4 {
+  background: url("../icons/visit1.svg") top 24px left 24px no-repeat;
+}
+.why__item_5 {
+  background: url("../icons/features-alt1.svg") top 24px left 24px no-repeat;
+}
+.why .section-description {
+  margin-top: 14px;
+}
+
+/*# sourceMappingURL=about.css.map */
