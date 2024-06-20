@@ -33,7 +33,7 @@ input[type="number"].no-arrows
     margin: 0
 
 .theme-color
-  color: #B10B2E
+  color: var(--red-brand)
 
 .visually-hidden
   position: absolute
@@ -107,6 +107,7 @@ input[type="number"].no-arrows
   font-family: Montserrat, sans-serif
   cursor: pointer
   display: inline-block
+  text-align: center
   &_burger
     padding: 10px
     position: relative
@@ -183,6 +184,9 @@ input[type="number"].no-arrows
     font-size: 18px
     line-height: 140%
     color: var(--black)
+    transition: box-shadow 0.2s ease-in-out
+    &:hover
+      box-shadow: inset 0 0 8px 4px var(--red-brand)
   &_transparent
     border: 1px solid var(--red-brand)
     border-radius: 10px
@@ -208,7 +212,6 @@ input[type="number"].no-arrows
       line-height: 140%
       color: var(--black)
       transition: background-color 0.5s, color 0.4s
-
 
 .container
   padding: 0 40px

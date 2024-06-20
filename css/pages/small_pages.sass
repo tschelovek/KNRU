@@ -1,5 +1,6 @@
 .career_page
   &__list
+    margin-top: 54px
     display: flex
     flex-flow: wrap
   &__item
@@ -20,6 +21,7 @@
         color: var(--black)
       ul
         list-style: unset
+        padding-left: 28px
         li
           margin-bottom: 20px
           &::marker
@@ -45,8 +47,57 @@
       background-position: bottom right 3%
       .btn_white
         display: inline-block
+        border: 1px solid var(--red-brand)
     p
       font-weight: 600
       font-size: 18px
       line-height: 140%
       color: var(--black)
+
+@media only screen and (max-width: 1280px)
+  .career_page
+    &__item
+      padding: 24px 22px
+      &_1 h3
+        font-size: 28px
+      &_2, &_3, &_4
+        background-size: 45%
+      &_6 .btn_white
+        padding: 16px
+
+@media only screen and (max-width: 864px)
+  .career_page__item
+    &_1
+      background-position: bottom right
+      div:first-child
+        flex-flow: column
+        gap: 24px
+    &_5
+      background-size: 70%
+    p
+      font-weight: 500
+      font-size: 16px
+
+@media only screen and (max-width: 768px)
+  .career_page__item
+    &_2, &_3, &_4
+      width: calc((100% - 30px) / 2)
+    &_3, &_5
+      margin-right: 0
+    &_4
+      margin-right: 30px
+    &_6
+      width: 100%
+
+@media only screen and (max-width: 480px)
+  .career_page__item
+    &_2, &_3, &_4, &_5
+      margin-right: 0
+      width: 100%
+      min-height: 220px
+
+@media only screen and (max-width: 375px)
+  .career_page__item
+    padding: 16px
+    &_1 h3
+      font-size: 22px
