@@ -7,20 +7,51 @@ document.addEventListener('DOMContentLoaded', () => {
     hideScrollbar: false,
   });
 
-
   const swiper1 = new Swiper('#slider_projects', {
-    // loop: true,
-    // autoplay: {
-    //     delay: 3000,
-    // },
+    loop: true,
+    autoplay: {
+        delay: 3000,
+    },
     speed: 1000,
     pagination: {
-      el: '.swiper-pagination',
+      el: '.swiper-pagination_callback',
       type: 'bullets',
       clickable: true
     },
     // slidesPerView: 1,
     spaceBetween: 20,
+  })
+
+  const swiper2 = new Swiper('#slider_partners', {
+    loop: true,
+    // autoplay: {
+    //     delay: 3000,
+    // },
+    speed: 1000,
+    pagination: {
+      el: '.swiper-pagination_partners',
+      type: 'bullets',
+      clickable: true
+    },
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+      440: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+      1280: {
+        slidesPerView: 5,
+        spaceBetween: 30,
+      },
+    }
   })
 
   /**

@@ -346,138 +346,153 @@ input[type="number"].no-arrows
         rotate: 135deg
 
 
+.swiper-pagination
+  position: static
+  width: auto !important
+  &-bullet
+    height: 3px
+    width: 50px
+    background-color: var(--gray-5)
+    -webkit-border-radius: 1.5px
+    -moz-border-radius: 1.5px
+    border-radius: 1.5px
+    opacity: 1
+    transition: width 0.3s, background-color 0.3s
+    &.swiper-pagination-bullet-active
+      width: 80px
+      background-color: var(--red-brand)
 .swiper-slide
   height: auto
 
-.modal
-  display: none
-  &_view
-    position: fixed
-    top: 0
-    right: 0
-    left: 0
-    z-index: 1050
-    display: none
-    overflow-x: hidden
-    outline: 0
-    transition: background-color 0.3s
-    -webkit-text-size-adjust: 100%
-    -moz-text-size-adjust: none
-    -ms-text-size-adjust: 100%
-    text-size-adjust: 100%
-    overscroll-behavior-y: contain
-    &.open
-      display: flex
-      justify-content: center
-      //align-items: center
-      background-color: hsla(0, 0%, 0%, 0.7)
-      height: 100%
-      overflow-y: scroll
-    .container
-      display: flex
-    &__wrapper
-      margin: auto
-      display: flex
-    &__h2
-      margin: 120px 0 84px
-      color: $black
-      font-family: Montserrat, sans-serif
-      font-size: 48px
-      font-weight: 400
-      line-height: 1.05
-    &__block
-      &_left
-        padding: 60px 120px 140px
-        flex: calc(1920/862)
-        background-color: white
-        &__controls
-          display: flex
-          align-items: center
-        &__content__image
-          max-width: 666px
-          img
-            max-inline-size: 100%
-      &_right
-        padding: 110px
-        flex: calc(1920/1058)
-        display: flex
-        flex-flow: column
-        gap: 60px
-        background: #1E2527 url(../images/bg_granit.png)
-        color: white
-        &__controls
-          display: flex
-          align-items: center
-          justify-content: center
-          gap: 20px
-          a
-            color: white
-        &__info .btn
-          margin-top: 50px
-        .projects
-          &__specs
-            &__title
-              color: white
-            &__text
-              color: white
-    &__p
-      margin-top: auto
-      color: white
-      font-size: 16px
-      font-style: normal
-      font-weight: 400
-      line-height: 1.5
-      max-width: 490px
-    #close_modal_view
-      width: 40px
-      height: 40px
-      font-size: 0
-      background-color: white
-      &::before
-        content: ''
-        display: block
-        background-color: $black
-        border: none
-        width: 38px
-        height: 1px
-        transform: rotate(45deg)
-      &::after
-        content: ''
-        display: block
-        background-color: $black
-        border: none
-        width: 38px
-        height: 1px
-        transform: rotate(-45deg)
-  &_default
-    background: #fff
-    border-radius: 3px
-    height: auto
-    position: relative
-    left: auto
-    top: auto
-    text-align: center
-    max-width: 600px
-    padding: 50px
-    width: 100%
-  &__input
-    padding: 12px 20px
-    background: #ffffff
-    width: 100%
-    border: #f3f3f4 1px solid
-    font-family: "Montserrat", sans-serif
-    font-weight: 400
-    font-size: 16px
-    line-height: 1.2
-    -moz-box-shadow: none
-    -webkit-box-shadow: none
-    box-shadow: none
-    -webkit-appearance: none
-  &-form__row
-    margin-bottom: 12px
-    button[type="submit"]
-      margin: 0 auto
-
+//.modal
+//  display: none
+//  &_view
+//    position: fixed
+//    top: 0
+//    right: 0
+//    left: 0
+//    z-index: 1050
+//    display: none
+//    overflow-x: hidden
+//    outline: 0
+//    transition: background-color 0.3s
+//    -webkit-text-size-adjust: 100%
+//    -moz-text-size-adjust: none
+//    -ms-text-size-adjust: 100%
+//    text-size-adjust: 100%
+//    overscroll-behavior-y: contain
+//    &.open
+//      display: flex
+//      justify-content: center
+//      //align-items: center
+//      background-color: hsla(0, 0%, 0%, 0.7)
+//      height: 100%
+//      overflow-y: scroll
+//    .container
+//      display: flex
+//    &__wrapper
+//      margin: auto
+//      display: flex
+//    &__h2
+//      margin: 120px 0 84px
+//      color: $black
+//      font-family: Montserrat, sans-serif
+//      font-size: 48px
+//      font-weight: 400
+//      line-height: 1.05
+//    &__block
+//      &_left
+//        padding: 60px 120px 140px
+//        flex: calc(1920/862)
+//        background-color: white
+//        &__controls
+//          display: flex
+//          align-items: center
+//        &__content__image
+//          max-width: 666px
+//          img
+//            max-inline-size: 100%
+//      &_right
+//        padding: 110px
+//        flex: calc(1920/1058)
+//        display: flex
+//        flex-flow: column
+//        gap: 60px
+//        background: #1E2527 url(../images/bg_granit.png)
+//        color: white
+//        &__controls
+//          display: flex
+//          align-items: center
+//          justify-content: center
+//          gap: 20px
+//          a
+//            color: white
+//        &__info .btn
+//          margin-top: 50px
+//        .projects
+//          &__specs
+//            &__title
+//              color: white
+//            &__text
+//              color: white
+//    &__p
+//      margin-top: auto
+//      color: white
+//      font-size: 16px
+//      font-style: normal
+//      font-weight: 400
+//      line-height: 1.5
+//      max-width: 490px
+//    #close_modal_view
+//      width: 40px
+//      height: 40px
+//      font-size: 0
+//      background-color: white
+//      &::before
+//        content: ''
+//        display: block
+//        background-color: $black
+//        border: none
+//        width: 38px
+//        height: 1px
+//        transform: rotate(45deg)
+//      &::after
+//        content: ''
+//        display: block
+//        background-color: $black
+//        border: none
+//        width: 38px
+//        height: 1px
+//        transform: rotate(-45deg)
+//  &_default
+//    background: #fff
+//    border-radius: 3px
+//    height: auto
+//    position: relative
+//    left: auto
+//    top: auto
+//    text-align: center
+//    max-width: 600px
+//    padding: 50px
+//    width: 100%
+//  &__input
+//    padding: 12px 20px
+//    background: #ffffff
+//    width: 100%
+//    border: #f3f3f4 1px solid
+//    font-family: "Montserrat", sans-serif
+//    font-weight: 400
+//    font-size: 16px
+//    line-height: 1.2
+//    -moz-box-shadow: none
+//    -webkit-box-shadow: none
+//    box-shadow: none
+//    -webkit-appearance: none
+//  &-form__row
+//    margin-bottom: 12px
+//    button[type="submit"]
+//      margin: 0 auto
+//
 .form__policy
   margin-top: 20px
   label
@@ -513,4 +528,34 @@ input[type="number"].no-arrows
   height: 100%
   overflow: hidden
 
+@media only screen and (max-width: 1024px)
+  .title_h2
+    font-size: 42px
 
+@media only screen and (max-width: 640px)
+  .container
+    padding: 0 24px
+  .title_h2
+    font-size: 32px
+  .swiper-pagination-bullet
+    height: 4px
+    -webkit-border-radius: 2px
+    -moz-border-radius: 2px
+    border-radius: 2px
+    width: 8px
+    &-active.swiper-pagination-bullet
+      width: 16px
+  .section-description
+    font-size: 20px
+
+@media only screen and (max-width: 480px)
+  .container
+    padding: 0 16px
+  .section-description
+    font-size: 18px
+
+@media only screen and (max-width: 375px)
+  .container
+    padding: 0 8px
+  .section-description
+    font-size: 16px
