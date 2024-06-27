@@ -68,6 +68,71 @@
   color: var(--black);
 }
 
+.office {
+  margin-top: 100px;
+}
+.office .container {
+  display: flex;
+}
+.office__info {
+  flex: 5;
+}
+.office__info p {
+  margin-top: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.office__info .address__list {
+  margin: 30px 0;
+}
+.office__map {
+  flex: 4;
+}
+.office__sm-links__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+}
+.office__sm-links__list {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.address__list a, .address__list div {
+  margin-bottom: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 140%;
+  color: var(--gray-dark-text);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.callback_contacts {
+  padding: 50px 30% 60px 40px;
+  background-repeat: no-repeat;
+  background-size: 336px;
+  background-position: right 22px center;
+}
+.callback_contacts h2 {
+  margin-bottom: 20px;
+}
+.callback_contacts p {
+  margin-bottom: 40px;
+}
+.callback_contacts__section {
+  margin-top: 100px;
+}
+
 @media only screen and (max-width: 1280px) {
   .career_page__item {
     padding: 24px 22px;

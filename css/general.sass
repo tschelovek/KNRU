@@ -18,6 +18,8 @@ body
   color: var(--black)
   font-family: Montserrat, sans-serif
 
+main
+  margin-bottom: 40px
 ul
   margin: 0
   padding: 0
@@ -364,149 +366,6 @@ input[type="number"].no-arrows
 .swiper-slide
   height: auto
 
-//.modal
-//  display: none
-//  &_view
-//    position: fixed
-//    top: 0
-//    right: 0
-//    left: 0
-//    z-index: 1050
-//    display: none
-//    overflow-x: hidden
-//    outline: 0
-//    transition: background-color 0.3s
-//    -webkit-text-size-adjust: 100%
-//    -moz-text-size-adjust: none
-//    -ms-text-size-adjust: 100%
-//    text-size-adjust: 100%
-//    overscroll-behavior-y: contain
-//    &.open
-//      display: flex
-//      justify-content: center
-//      //align-items: center
-//      background-color: hsla(0, 0%, 0%, 0.7)
-//      height: 100%
-//      overflow-y: scroll
-//    .container
-//      display: flex
-//    &__wrapper
-//      margin: auto
-//      display: flex
-//    &__h2
-//      margin: 120px 0 84px
-//      color: $black
-//      font-family: Montserrat, sans-serif
-//      font-size: 48px
-//      font-weight: 400
-//      line-height: 1.05
-//    &__block
-//      &_left
-//        padding: 60px 120px 140px
-//        flex: calc(1920/862)
-//        background-color: white
-//        &__controls
-//          display: flex
-//          align-items: center
-//        &__content__image
-//          max-width: 666px
-//          img
-//            max-inline-size: 100%
-//      &_right
-//        padding: 110px
-//        flex: calc(1920/1058)
-//        display: flex
-//        flex-flow: column
-//        gap: 60px
-//        background: #1E2527 url(../images/bg_granit.png)
-//        color: white
-//        &__controls
-//          display: flex
-//          align-items: center
-//          justify-content: center
-//          gap: 20px
-//          a
-//            color: white
-//        &__info .btn
-//          margin-top: 50px
-//        .projects
-//          &__specs
-//            &__title
-//              color: white
-//            &__text
-//              color: white
-//    &__p
-//      margin-top: auto
-//      color: white
-//      font-size: 16px
-//      font-style: normal
-//      font-weight: 400
-//      line-height: 1.5
-//      max-width: 490px
-//    #close_modal_view
-//      width: 40px
-//      height: 40px
-//      font-size: 0
-//      background-color: white
-//      &::before
-//        content: ''
-//        display: block
-//        background-color: $black
-//        border: none
-//        width: 38px
-//        height: 1px
-//        transform: rotate(45deg)
-//      &::after
-//        content: ''
-//        display: block
-//        background-color: $black
-//        border: none
-//        width: 38px
-//        height: 1px
-//        transform: rotate(-45deg)
-//  &_default
-//    background: #fff
-//    border-radius: 3px
-//    height: auto
-//    position: relative
-//    left: auto
-//    top: auto
-//    text-align: center
-//    max-width: 600px
-//    padding: 50px
-//    width: 100%
-//  &__input
-//    padding: 12px 20px
-//    background: #ffffff
-//    width: 100%
-//    border: #f3f3f4 1px solid
-//    font-family: "Montserrat", sans-serif
-//    font-weight: 400
-//    font-size: 16px
-//    line-height: 1.2
-//    -moz-box-shadow: none
-//    -webkit-box-shadow: none
-//    box-shadow: none
-//    -webkit-appearance: none
-//  &-form__row
-//    margin-bottom: 12px
-//    button[type="submit"]
-//      margin: 0 auto
-//
-.form__policy
-  margin-top: 20px
-  label
-    font-size: 12px
-    font-weight: 300
-    svg
-      max-width: 100%
-      width: auto
-      height: 15px
-    span
-      flex-shrink: 2
-  &__link
-    text-decoration: underline
-
 .notice_checked
   position: absolute
   z-index: -1
@@ -528,9 +387,110 @@ input[type="number"].no-arrows
   height: 100%
   overflow: hidden
 
+.callback
+  &-block
+    margin-top: 100px
+    .btn-wrapper
+      margin-top: 30px
+      display: flex
+      justify-content: space-between
+      align-items: center
+  &__slide
+    padding: 40px
+    display: flex
+    align-items: center
+    gap: 48px
+    &_bordered
+      border: 1px solid var(--gray-5)
+      -webkit-border-radius: 20px
+      -moz-border-radius: 20px
+      border-radius: 20px
+    &__info
+      h2
+        margin-bottom: 20px
+        padding-right: 100px
+        font-weight: 600
+        font-size: 32px
+        line-height: 130%
+        color: var(--black)
+      p
+        margin-top: 20px
+        padding-right: 126px
+        font-weight: 400
+        font-size: 18px
+        line-height: 140%
+        color: var(--gray-dark-text)
+    &__form
+      margin-top: 40px
+
+    & > div
+      flex: 1
+
+.form
+  &__row
+    margin-bottom: 14px
+    display: flex
+    align-items: center
+    gap: 14px
+    &:last-child
+      margin-bottom: unset
+  &__field-wrapper
+    flex: 1
+    input, textarea
+      padding: 16px 20px
+      border-radius: 10px
+      border: none
+      width: 100%
+      &::placeholder
+        font-family: "Roboto", sans-serif
+        font-weight: 400
+        font-size: 16px
+        line-height: 140%
+        color: var(--gray-dark-text)
+      &:focus
+        outline: none
+    input
+      height: 54px
+    textarea
+      min-height: 100px
+
+    .btn_submit
+      width: 100%
+      height: 54px
+  &__privacy
+    margin-top: 14px
+    font-family: "Roboto", sans-serif
+    font-weight: 400
+    font-size: 15px
+    line-height: 140%
+    color: var(--gray-3)
+    &__link
+      text-decoration: underline
+      text-decoration-skip-ink: none
+      color: var(--red-brand)
+
+  &__policy
+    margin-top: 20px
+    label
+      font-size: 12px
+      font-weight: 300
+      svg
+        max-width: 100%
+        width: auto
+        height: 15px
+      span
+        flex-shrink: 2
+    &__link
+      text-decoration: underline
+
 @media only screen and (max-width: 1024px)
   .title_h2
     font-size: 42px
+  .callback__slide
+    flex-flow: column
+    &__info
+      h2, p
+        padding-right: unset
 
 @media only screen and (max-width: 640px)
   .container
@@ -553,6 +513,10 @@ input[type="number"].no-arrows
     padding: 0 16px
   .section-description
     font-size: 18px
+  .callback__slide
+    padding: 24px
+    &__info h2
+      font-size: 26px
 
 @media only screen and (max-width: 375px)
   .container

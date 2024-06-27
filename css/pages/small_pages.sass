@@ -54,6 +54,61 @@
       line-height: 140%
       color: var(--black)
 
+.office
+  margin-top: 100px
+  .container
+    display: flex
+  &__info
+    flex: 5
+    p
+      margin-top: 14px
+      font-family: "Roboto", sans-serif
+      font-weight: 400
+      font-size: 18px
+      line-height: 140%
+      color: var(--gray-dark-text)
+    .address__list
+      margin: 30px 0
+  &__map
+    flex: 4
+  &__sm-links
+    &__title
+      font-family: "Roboto", sans-serif
+      font-weight: 400
+      font-size: 18px
+      line-height: 140%
+      color: var(--gray-dark-text)
+    &__list
+      margin-top: 14px
+      display: flex
+      align-items: center
+      gap: 14px
+
+.address__list
+  a, div
+    margin-bottom: 14px
+    font-family: "Montserrat", sans-serif
+    font-weight: 600
+    font-size: 18px
+    line-height: 140%
+    color: var(--gray-dark-text)
+    display: flex
+    align-items: center
+    gap: 14px
+
+.callback_contacts
+  padding: 50px 30% 60px 40px
+  background-repeat: no-repeat
+  background-size: 336px
+  background-position: right 22px center
+  h2
+    margin-bottom: 20px
+  p
+    margin-bottom: 40px
+
+  &__section
+    margin-top: 100px
+
 @media only screen and (max-width: 1280px)
   .career_page
     &__item
