@@ -58,6 +58,7 @@
   margin-top: 100px
   .container
     display: flex
+    gap: 40px 80px
   &__info
     flex: 5
     p
@@ -71,6 +72,10 @@
       margin: 30px 0
   &__map
     flex: 4
+    -webkit-border-radius: 20px
+    -moz-border-radius: 20px
+    border-radius: 20px
+    overflow: hidden
   &__sm-links
     &__title
       font-family: "Roboto", sans-serif
@@ -95,6 +100,15 @@
     display: flex
     align-items: center
     gap: 14px
+    transition: color 0.3s
+  a
+    svg path
+      transition: stroke 0.3s
+    &:hover
+      color: var(--red-brand)
+      svg path
+        stroke: var(--red-brand)
+
 
 .callback_contacts
   padding: 50px 30% 60px 40px
@@ -120,6 +134,17 @@
       &_6 .btn_white
         padding: 16px
 
+@media only screen and (max-width: 960px)
+  .office .container
+    flex-flow: column
+  .callback_contacts
+    padding: 40px
+    text-shadow: 0 0 5px white
+    background-size: auto 70%
+    background-position: right 22px bottom
+  .form__field-wrapper input, .form__field-wrapper textarea
+    opacity: 0.95
+
 @media only screen and (max-width: 864px)
   .career_page__item
     &_1
@@ -143,6 +168,13 @@
       margin-right: 30px
     &_6
       width: 100%
+
+@media only screen and (max-width: 640px)
+  .callback_contacts
+    .form__row
+      flex-flow: column
+    .form__field-wrapper input, .form__field-wrapper textarea
+      min-width: 280px
 
 @media only screen and (max-width: 480px)
   .career_page__item

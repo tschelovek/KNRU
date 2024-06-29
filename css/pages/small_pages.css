@@ -73,6 +73,7 @@
 }
 .office .container {
   display: flex;
+  gap: 40px 80px;
 }
 .office__info {
   flex: 5;
@@ -90,6 +91,10 @@
 }
 .office__map {
   flex: 4;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .office__sm-links__title {
   font-family: "Roboto", sans-serif;
@@ -115,6 +120,16 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  transition: color 0.3s;
+}
+.address__list a svg path {
+  transition: stroke 0.3s;
+}
+.address__list a:hover {
+  color: var(--red-brand);
+}
+.address__list a:hover svg path {
+  stroke: var(--red-brand);
 }
 
 .callback_contacts {
@@ -147,6 +162,20 @@
     padding: 16px;
   }
 }
+@media only screen and (max-width: 960px) {
+  .office .container {
+    flex-flow: column;
+  }
+  .callback_contacts {
+    padding: 40px;
+    text-shadow: 0 0 5px white;
+    background-size: auto 70%;
+    background-position: right 22px bottom;
+  }
+  .form__field-wrapper input, .form__field-wrapper textarea {
+    opacity: 0.95;
+  }
+}
 @media only screen and (max-width: 864px) {
   .career_page__item_1 {
     background-position: bottom right;
@@ -175,6 +204,14 @@
   }
   .career_page__item_6 {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .callback_contacts .form__row {
+    flex-flow: column;
+  }
+  .callback_contacts .form__field-wrapper input, .callback_contacts .form__field-wrapper textarea {
+    min-width: 280px;
   }
 }
 @media only screen and (max-width: 480px) {
